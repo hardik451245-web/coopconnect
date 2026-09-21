@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "CoopConnect"
+description = "A responsive cooperative services marketplace prototype for SIH problem statement 26089, connecting households with verified workers while making fair contribution and welfare allocation transparent."
+version = "1.0.0"
+id = "artifacts/coopconnect"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18235
+
+[services.development]
+run = "pnpm --filter @workspace/coopconnect run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/coopconnect", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/coopconnect/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18235"
+BASE_PATH = "/"

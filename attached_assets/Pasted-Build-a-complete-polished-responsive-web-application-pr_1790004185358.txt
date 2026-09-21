@@ -1,0 +1,1373 @@
+Build a complete, polished, responsive web application prototype for **Smart India Hackathon 2026 Problem Statement 26089 — “Cooperative Gig Services Platform for Household & Community Services.”**
+
+IMPORTANT:
+
+* I am using **Replit Free**, so optimize heavily for free-tier usage.
+* Build the complete MVP/prototype in **one implementation pass**.
+* Do NOT repeatedly ask me questions or wait for confirmation.
+* Do NOT use paid APIs, paid databases, paid AI services, paid maps, paid SMS, paid authentication providers, or external services requiring API keys.
+* Minimize dependencies, build time, API calls, background processes, and unnecessary database operations.
+* The application must work immediately after pressing Run.
+* Use mock/demo data and local storage where a real backend service is not necessary.
+* Do not create unnecessary microservices.
+* Prefer one lightweight full-stack application.
+* Make the application look like a serious SIH competition prototype, not a basic student CRUD website.
+
+## 1. PRODUCT NAME
+
+Use the application name:
+
+**CoopConnect**
+
+Subtitle:
+
+**Cooperative Gig Services Platform**
+
+Tagline:
+
+**Fair Work. Trusted Services. Cooperative Future.**
+
+The design should communicate:
+
+* cooperative ownership
+* worker empowerment
+* trust
+* transparency
+* safety
+* fair earnings
+* community services
+
+---
+
+# 2. CORE OBJECTIVE
+
+Create a digital cooperative marketplace connecting:
+
+### Customers
+
+Households, communities and institutions looking for:
+
+* electrician
+* plumber
+* carpenter
+* painter
+* cleaner
+* domestic helper
+* caregiver
+* driver
+* gardener
+* technician
+* other household/community services
+
+### Cooperative Workers
+
+Verified skilled workers who can:
+
+* create profiles
+* show verified skills
+* receive jobs
+* accept/reject jobs
+* view earnings
+* view welfare contribution
+* receive ratings
+* access safety features
+* maintain a digital professional record
+
+### Cooperative/Admin
+
+Cooperative administrators who can:
+
+* verify workers
+* manage services
+* monitor bookings
+* monitor cooperative contribution
+* monitor welfare fund
+* see worker and customer statistics
+* manage emergency requests
+* see analytics
+
+---
+
+# 3. TECHNOLOGY REQUIREMENTS
+
+Use a lightweight stack suitable for Replit Free.
+
+Preferred:
+
+* React
+* Vite
+* JavaScript or TypeScript
+* Tailwind CSS
+* React Router
+* Lucide React icons
+* Lightweight Node/Express backend only if genuinely required
+
+Avoid:
+
+* Docker
+* Kubernetes
+* microservices
+* Redis
+* Elasticsearch
+* expensive cloud services
+* unnecessary authentication packages
+* unnecessary AI SDKs
+* paid APIs
+
+For the prototype:
+
+* use localStorage for demo persistence
+* use static/mock JSON data
+* use deterministic mock AI logic
+* use browser APIs where useful
+* keep the application self-contained
+
+If a backend is unnecessary for a feature, implement it in the frontend.
+
+---
+
+# 4. APPLICATION STRUCTURE
+
+Create these major areas:
+
+### CUSTOMER
+
+1. Home
+2. Services
+3. Service Search
+4. Worker Discovery
+5. Worker Profile
+6. Book a Service
+7. Group Booking
+8. Multi-Service Project Booking
+9. My Bookings
+10. Booking Details
+11. Payments
+12. Welfare Contribution Transparency
+13. Emergency/SOS
+14. Ratings & Reviews
+15. Profile
+
+### WORKER
+
+16. Worker Dashboard
+17. Digital Cooperative Worker Passport
+18. Job Requests
+19. My Jobs
+20. Earnings
+21. Welfare & Insurance
+22. Availability
+23. Ratings
+24. Safety/SOS
+
+### ADMIN/COOPERATIVE
+
+25. Cooperative Dashboard
+26. Worker Verification
+27. Booking Management
+28. Welfare Fund Dashboard
+29. Emergency Management
+30. Analytics
+31. Service Management
+
+---
+
+# 5. LANDING PAGE
+
+Create a visually impressive landing page.
+
+Hero section:
+
+**Fair Work. Trusted Services. Cooperative Future.**
+
+Supporting text:
+
+“Connect with verified cooperative workers for trusted household and community services while promoting fair earnings, worker welfare and community ownership.”
+
+Buttons:
+
+**Book a Service**
+
+**Join as Worker**
+
+Secondary button:
+
+**Explore Cooperative Model**
+
+Show service cards:
+
+* Electrician
+* Plumber
+* Carpenter
+* Painter
+* Cleaner
+* Caregiver
+* Driver
+* Gardener
+* Technician
+
+Show statistics using demo values:
+
+* Verified Workers
+* Services Completed
+* Active Cooperatives
+* Worker Welfare Supported
+
+Do NOT claim these are real statistics. Clearly indicate demo/prototype data where appropriate.
+
+---
+
+# 6. CUSTOMER SERVICE SEARCH
+
+Create a service discovery interface.
+
+Filters:
+
+* Service type
+* Location
+* Availability
+* Rating
+* Price range
+* Worker gender preference
+* Verified worker only
+
+Search example:
+
+“I need a plumber tomorrow morning.”
+
+The prototype should show an AI-style matching result:
+
+**Recommended Workers**
+
+For every worker show:
+
+* name
+* profile photo/avatar
+* service
+* verification badge
+* cooperative
+* experience
+* rating
+* distance
+* availability
+* estimated price
+* completed jobs
+
+Use a simple local matching algorithm.
+
+Example:
+
+Match score =
+
+* skill match
+* availability
+* distance
+* rating
+* verification
+
+Do NOT connect to an external AI API.
+
+Label it:
+
+**AI-Assisted Matching — Prototype**
+
+---
+
+# 7. COOPERATIVE WORKER DIGITAL PASSPORT
+
+This is one of the main unique features.
+
+Create a professional digital passport for every worker.
+
+Call it:
+
+**Cooperative Worker Digital Passport**
+
+It should contain:
+
+* Worker name
+* Worker ID
+* Cooperative membership
+* Profile photo/avatar
+* Primary skills
+* Secondary skills
+* Verification status
+* Years of experience
+* Completed jobs
+* Average rating
+* Safety training status
+* Certifications
+* Work history
+* Customer feedback
+* Cooperative status
+* Welfare eligibility/status
+
+Add:
+
+**Verified Cooperative Worker**
+
+badge.
+
+Add a QR-style visual placeholder labelled:
+
+**Verify Worker**
+
+For the prototype, the QR does not need a real external verification system.
+
+Create a professional digital-card layout.
+
+---
+
+# 8. COMMUNITY GROUP BOOKING & JOB POOLING
+
+Create a unique feature:
+
+**Community Group Booking**
+
+Purpose:
+Multiple nearby households can combine similar service requests.
+
+Example:
+
+5 households in one locality need plumbing work.
+
+The system groups compatible requests.
+
+Show:
+
+**Community Job Pool**
+
+Example:
+
+* Household A — Kitchen tap repair
+* Household B — Bathroom leakage
+* Household C — Pipe replacement
+* Household D — Water connection repair
+
+Then show:
+
+**AI Suggested Route & Schedule**
+
+Worker:
+Rajesh Kumar
+
+Time:
+9:00 AM – 1:30 PM
+
+The UI should explain:
+
+“Nearby compatible requests have been grouped to reduce travel time and improve worker utilization.”
+
+Use simulated AI logic only.
+
+---
+
+# 9. COOPERATIVE WELFARE & TRANSPARENT CONTRIBUTION
+
+This is extremely important.
+
+DO NOT describe the 20% as an arbitrary platform commission.
+
+Call it:
+
+**Transparent Cooperative Contribution**
+
+The service payment should clearly show the cooperative contribution.
+
+FINAL BREAKDOWN:
+
+### 20% Cooperative Contribution
+
+**5% — App & Technology Running Cost**
+
+* hosting
+* maintenance
+* security
+* notifications
+* technical support
+
+**6% — Worker Insurance & Social Security**
+
+* insurance support
+* social security/welfare benefits
+
+**4% — Emergency Assistance Fund**
+
+* emergency financial support
+* accident/emergency assistance
+
+**5% — Year-End Cooperative Surplus**
+
+* retained/distributed according to cooperative rules
+* member/worker benefit
+
+TOTAL:
+
+**20%**
+
+Create an attractive transparent payment breakdown.
+
+Example:
+
+Service Value:
+₹1,000
+
+Cooperative Contribution:
+₹200
+
+Breakdown:
+
+₹50 — App & Technology Running Cost
+
+₹60 — Insurance & Social Security
+
+₹40 — Emergency Assistance
+
+₹50 — Year-End Cooperative Surplus
+
+Total:
+₹200
+
+Worker-facing screen should clearly show:
+
+* Service earning
+* Cooperative contribution
+* contribution breakdown
+* net earning
+* welfare support status
+
+Make it clear that the contribution is transparently allocated for cooperative purposes.
+
+---
+
+# 10. WOMEN-SAFE SERVICE ASSIGNMENT
+
+Create a feature:
+
+**Women-Safe Service Assignment**
+
+Customer can select:
+
+**Prefer Female Service Professional**
+
+When selected, the matching system prioritizes eligible verified female workers.
+
+Show:
+
+* Female worker pool
+* verified profile
+* availability
+* rating
+* service skills
+* location
+* safety badge
+
+Worker safety features:
+
+* SOS button
+* emergency contact
+* job sharing
+* check-in/check-out
+* emergency assistance
+
+Do not make unsupported claims such as guaranteed safety.
+
+Use wording such as:
+
+“Safety-support features designed to improve transparency and emergency response.”
+
+---
+
+# 11. AI COORDINATED MULTI-SERVICE PROJECT BOOKING
+
+Do NOT call this “All Work Booking.”
+
+Use the professional name:
+
+**AI Coordinated Multi-Service Project Booking**
+
+Example use case:
+
+A customer is renovating a house.
+
+They need:
+
+* Electrician
+* Plumber
+* Painter
+* Carpenter
+
+Customer creates one project:
+
+**Home Renovation Project**
+
+The AI prototype decomposes it into service tasks.
+
+Example schedule:
+
+Day 1
+Electrician — electrical preparation
+
+Day 2
+Plumber — plumbing work
+
+Day 3
+Carpenter — carpentry work
+
+Day 4
+Painter — painting
+
+The system should automatically:
+
+* identify required services
+* find suitable workers
+* check availability
+* assign approximate time slots
+* respect basic task dependencies
+* create one project timeline
+* show project progress
+
+Use deterministic mock AI logic.
+
+No external AI API.
+
+Show:
+
+**AI Project Coordinator — Prototype**
+
+---
+
+# 12. FAIR WAGE / PRICING
+
+Create a transparent pricing interface.
+
+Show:
+
+Base service estimate
+
+Example:
+
+Plumbing repair:
+₹800
+
+Cooperative contribution:
+₹160
+
+Total customer payment:
+₹960
+
+Worker earnings and contribution should be clearly separated.
+
+Do not create hidden fees.
+
+Create a section:
+
+**Why this price?**
+
+Show:
+
+* service type
+* estimated effort
+* location/travel factor
+* cooperative contribution
+* final amount
+
+Label pricing as:
+
+**AI-Assisted Fair Price Estimate — Prototype**
+
+---
+
+# 13. BOOKING SYSTEM
+
+Create a complete demo booking flow.
+
+Customer selects:
+
+* service
+* worker
+* date
+* time
+* location
+* description
+* preferred worker gender if applicable
+
+Then:
+
+**Review Booking**
+
+Then:
+
+**Confirm Booking**
+
+Then generate a booking ID.
+
+Example:
+
+CC-2026-00124
+
+Booking status:
+
+Requested
+→ Accepted
+→ Worker On The Way
+→ Work Started
+→ Completed
+
+Use localStorage so the demo works without a database.
+
+---
+
+# 14. PAYMENT PAGE
+
+Create a simulated payment page.
+
+Payment methods:
+
+* UPI
+* Card
+* Cash
+* Cooperative Wallet
+
+Do NOT integrate real payment gateways.
+
+Use:
+
+**Demo Payment**
+
+After payment:
+
+**Payment Successful**
+
+Show:
+
+* service amount
+* cooperative contribution
+* contribution breakdown
+* worker earnings
+* booking ID
+
+---
+
+# 15. EMERGENCY / SOS
+
+Create a prominent SOS feature.
+
+Customer and worker dashboards should have:
+
+**Emergency SOS**
+
+Clicking opens a confirmation panel with:
+
+* Emergency assistance
+* Contact cooperative support
+* Share booking information
+* Emergency contact
+* Current booking ID
+
+Since this is a prototype:
+DO NOT actually call emergency services.
+
+Use simulated status:
+
+**Emergency request sent to Cooperative Support**
+
+---
+
+# 16. WORKER DASHBOARD
+
+Create a professional worker dashboard.
+
+Cards:
+
+Today's Jobs
+
+Pending Requests
+
+Monthly Earnings
+
+Average Rating
+
+Welfare Support
+
+Completed Jobs
+
+Upcoming Jobs
+
+Include:
+
+**My Cooperative Worker Digital Passport**
+
+Quick actions:
+
+* View Jobs
+* Update Availability
+* View Earnings
+* Welfare
+* SOS
+
+---
+
+# 17. WORKER EARNINGS
+
+Create charts using lightweight frontend charting or CSS/SVG if possible.
+
+Show:
+
+Total Earnings
+
+Cooperative Contribution
+
+Net Earnings
+
+Insurance/Social Security Allocation
+
+Emergency Fund Allocation
+
+Year-End Surplus
+
+Example monthly data.
+
+Clearly label all figures as:
+
+**Demo Data**
+
+---
+
+# 18. COOPERATIVE ADMIN DASHBOARD
+
+Create a powerful but simple admin dashboard.
+
+Cards:
+
+Total Workers
+
+Verified Workers
+
+Active Bookings
+
+Completed Services
+
+Worker Welfare Contribution
+
+Emergency Requests
+
+Community Group Bookings
+
+Multi-Service Projects
+
+Charts:
+
+* bookings by service
+* worker utilization
+* welfare allocation
+* monthly cooperative activity
+
+Create a worker verification table:
+
+Worker
+Skill
+Cooperative
+Verification
+Rating
+Jobs
+Status
+
+Buttons:
+
+* View
+* Verify
+* Suspend
+
+These can work with mock local data.
+
+---
+
+# 19. MULTILINGUAL / LOW-LITERACY UX
+
+Create a language selector in the header.
+
+Languages:
+
+English
+
+हिन्दी
+
+मराठी
+
+For the prototype, implement enough UI translation to demonstrate the concept.
+
+At minimum translate:
+
+* Home
+* Services
+* Book
+* Worker
+* Jobs
+* Earnings
+* Welfare
+* Emergency
+* Profile
+
+Use simple language and icons.
+
+Also create a large microphone/voice button:
+
+**🎙 Voice Booking**
+
+For prototype purposes, use browser speech recognition if available.
+
+If unsupported, show:
+
+“Voice booking demo available in supported browsers.”
+
+Do not use external speech APIs.
+
+---
+
+# 20. VOICE-FIRST BOOKING
+
+Create:
+
+**Voice Booking**
+
+Example text:
+
+“मुझे कल सुबह plumber चाहिए।”
+
+The prototype can convert speech to text using the browser's built-in speech recognition where available.
+
+Then show:
+
+Detected request:
+Plumber
+
+Date:
+Tomorrow
+
+Time:
+Morning
+
+Location:
+Selected location
+
+Then:
+
+**Find Workers**
+
+Do not use paid speech APIs.
+
+---
+
+# 21. OFFLINE-FRIENDLY DESIGN
+
+Make the application resilient when offline.
+
+Use:
+
+* localStorage
+* cached demo data
+* service worker/PWA if lightweight
+
+Display:
+
+**Offline Mode**
+
+when browser is offline.
+
+Do not build complicated backend synchronization.
+
+---
+
+# 22. TRUST & SAFETY
+
+Every worker profile should show:
+
+✓ Identity Verified
+
+✓ Skill Verified
+
+✓ Cooperative Member
+
+✓ Rating Available
+
+✓ Job History
+
+Create:
+
+**Why Trust This Worker?**
+
+section.
+
+Show transparent verification information.
+
+Do not claim actual government verification unless implemented.
+
+---
+
+# 23. UI/UX DESIGN
+
+Make the UI modern and professional.
+
+Design principles:
+
+* clean dashboard
+* rounded cards
+* strong typography
+* accessible buttons
+* responsive mobile-first layout
+* simple navigation
+* meaningful icons
+* clear status badges
+* minimal clutter
+* excellent spacing
+
+The application must look good on:
+
+Mobile
+
+Tablet
+
+Desktop
+
+Create a bottom navigation on mobile:
+
+Home
+Services
+Bookings
+Messages
+Profile
+
+Desktop can use sidebar navigation.
+
+Use a consistent cooperative visual identity.
+
+Do not make the design overly flashy.
+
+---
+
+# 24. DEMO DATA
+
+Create realistic but clearly fictional demo workers.
+
+Example:
+
+Amit Sharma — Electrician
+
+Priya Patil — Painter
+
+Rajesh Kumar — Plumber
+
+Neha Verma — Caregiver
+
+Sanjay More — Carpenter
+
+Meena Joshi — Cleaner
+
+Do not use real people's personal information.
+
+Use fictional addresses and phone numbers.
+
+---
+
+# 25. DEMO LOGIN
+
+Avoid real authentication services.
+
+Create a simple demo role selector:
+
+**Continue as:**
+
+Customer
+
+Worker
+
+Cooperative Admin
+
+Clicking the role opens the relevant dashboard.
+
+Store the selected role in localStorage.
+
+Add:
+
+**Demo Mode**
+
+indicator.
+
+---
+
+# 26. IMPORTANT UNIQUE FEATURES TO HIGHLIGHT
+
+Create a dedicated page:
+
+**What Makes CoopConnect Different?**
+
+Highlight these five new features:
+
+1. **Cooperative Worker Digital Passport**
+2. **Community Group Booking & Job Pooling**
+3. **Transparent Cooperative Contribution**
+4. **Women-Safe Service Assignment**
+5. **AI Coordinated Multi-Service Project Booking**
+
+Also show the original platform capabilities:
+
+* Worker verification
+* AI-assisted matching
+* location-based recommendations
+* fair pricing
+* trust and safety
+* cooperative dashboard
+* multilingual UX
+* voice-first booking
+
+---
+
+# 27. ARCHITECTURE PAGE
+
+Create a simple visual architecture page.
+
+Show:
+
+Customer App
+↓
+CoopConnect Platform
+↓
+Services
+
+Worker Management
+Booking Management
+Matching Engine
+Pricing Engine
+Welfare Management
+Notification System
+Safety/SOS
+Project Coordinator
+
+↓
+
+Cooperative Dashboard
+
+For the prototype, all components may run inside one lightweight application.
+
+Do NOT actually implement microservices.
+
+---
+
+# 28. DATABASE / DATA MODEL
+
+Use localStorage or lightweight in-memory/mock data.
+
+Create logical models:
+
+User
+
+Worker
+
+Cooperative
+
+Service
+
+Booking
+
+Project
+
+ProjectTask
+
+Payment
+
+WelfareContribution
+
+EmergencyRequest
+
+Review
+
+Availability
+
+Do not create a complicated production database unless necessary.
+
+---
+
+# 29. AI FEATURES
+
+Since I have limited/free resources, DO NOT use external AI APIs.
+
+Create deterministic prototype algorithms for:
+
+### Worker Matching
+
+Score workers based on:
+
+* skill
+* availability
+* distance
+* rating
+* verification
+
+### Group Booking
+
+Group nearby compatible service requests.
+
+### Fair Price
+
+Generate an estimated price using:
+service base price + simple configurable factors.
+
+### Multi-Service Project
+
+Convert project type into predefined service tasks.
+
+Example:
+
+Renovation →
+Electrician + Plumber + Carpenter + Painter
+
+### Welfare Explanation
+
+Automatically calculate and display the 20% contribution breakdown.
+
+Label all these:
+
+**AI-Assisted Prototype Logic**
+
+This demonstrates the concept without consuming paid AI credits.
+
+---
+
+# 30. DEMO SCENARIO FOR JUDGES
+
+Create a “Demo Mode” button that automatically loads a complete sample scenario.
+
+Scenario:
+
+Customer wants to renovate a house.
+
+Customer selects:
+
+**AI Coordinated Multi-Service Project Booking**
+
+Project:
+Home Renovation
+
+Required:
+Electrician
+Plumber
+Carpenter
+Painter
+
+System:
+
+1. identifies services
+2. recommends workers
+3. checks availability
+4. creates schedule
+5. shows project timeline
+6. shows estimated cost
+7. shows 20% cooperative contribution
+8. shows welfare allocation
+9. confirms booking
+
+This should be the main demonstration flow for SIH judges.
+
+---
+
+# 31. RESPONSIVE DEMO
+
+The application must work properly at:
+
+360px mobile width
+
+768px tablet width
+
+1366px desktop width
+
+No horizontal scrolling.
+
+---
+
+# 32. ACCESSIBILITY
+
+Use:
+
+* proper labels
+* keyboard-friendly controls
+* sufficient text contrast
+* large touch targets
+* aria labels where appropriate
+* readable font sizes
+
+---
+
+# 33. ERROR HANDLING
+
+Do not let the UI crash if:
+
+* localStorage is empty
+* browser speech recognition isn't available
+* a mock worker is unavailable
+* a demo booking is incomplete
+
+Show friendly messages.
+
+---
+
+# 34. PERFORMANCE / REPLIT FREE OPTIMIZATION
+
+This is extremely important.
+
+Keep the project lightweight.
+
+DO NOT:
+
+* install unnecessary packages
+* run multiple servers
+* create background workers
+* continuously poll APIs
+* use real-time sockets
+* call AI APIs repeatedly
+* use paid services
+* generate huge files
+* download large assets
+* use unnecessary image libraries
+
+Use:
+
+* SVG icons
+* CSS
+* lightweight components
+* mock JSON
+* localStorage
+
+The app should start quickly.
+
+---
+
+# 35. README
+
+Create a professional README.md containing:
+
+Project name
+
+Problem Statement:
+SIH 26089
+
+Problem:
+Cooperative skilled workers need a structured digital platform connecting them with households and institutions.
+
+Solution:
+CoopConnect
+
+Key Features
+
+Technology Stack
+
+Architecture
+
+AI Prototype Logic
+
+20% Cooperative Contribution Model
+
+Demo Instructions
+
+Future Scope
+
+Limitations
+
+Important:
+Clearly distinguish prototype/demo functionality from production functionality.
+
+---
+
+# 36. PROJECT DOCUMENTATION INSIDE APP
+
+Create an “About Project” page containing:
+
+Problem
+
+Solution
+
+Target Users
+
+Key Features
+
+Innovation
+
+Cooperative Model
+
+Technology
+
+Impact
+
+Future Scope
+
+This page should help SIH judges understand the project without needing the developer to explain every screen.
+
+---
+
+# 37. FINAL DEMO FLOW
+
+The homepage should have a prominent:
+
+**Start SIH Demo**
+
+button.
+
+Clicking it should take the user through:
+
+1. Customer
+2. Select Home Renovation
+3. Multi-Service Project Booking
+4. AI identifies required workers
+5. Worker recommendations
+6. Schedule
+7. Price estimate
+8. 20% cooperative contribution breakdown
+9. Welfare allocation
+10. Confirm booking
+11. Project timeline
+12. Worker dashboard
+13. Cooperative dashboard
+
+Make this flow polished and easy to demonstrate in approximately 3–5 minutes.
+
+---
+
+# 38. FINAL QUALITY REQUIREMENT
+
+Before finishing:
+
+* test all navigation
+* test all buttons
+* test mobile layout
+* test localStorage
+* test demo mode
+* test booking flow
+* test welfare calculation
+* test multi-service project
+* test worker passport
+* test group booking
+* test female-worker preference
+* test SOS UI
+* test language switcher
+* test voice booking fallback
+* make sure there are no broken routes
+* make sure there are no console errors
+* make sure npm run dev/start works
+
+If a feature cannot be implemented fully without an external paid service, create a convincing local prototype simulation instead of leaving it broken.
+
+DO NOT stop after creating a basic landing page.
+
+Build the COMPLETE WORKING PROTOTYPE.
+
+Prioritize functionality and demo quality over unnecessary backend complexity.
+
+At the end, provide a very short summary of:
+
+1. what was built
+2. how to run it
+3. demo login/roles
+4. main SIH demo flow
+5. any limitations
+
+Do not ask me unnecessary questions. Start building the application immediately.
