@@ -1,0 +1,567 @@
+# 47. INSURANCE & EMERGENCY WELFARE SECTION
+
+Add a dedicated section in the **left-side navigation/sidebar** called:
+
+## 🛡️ Insurance & Emergency
+
+When the user taps/clicks it, open a dedicated premium page.
+
+This section should explain clearly:
+
+### Purpose
+
+The purpose of this section is to show how part of the transparent cooperative contribution supports worker protection, insurance/social security, and emergency assistance.
+
+Create two major cards:
+
+---
+
+## 🛡️ WORKER INSURANCE & SOCIAL SECURITY
+
+Show:
+
+**6% of the Cooperative Contribution**
+
+Purpose:
+
+* Worker insurance support
+* Social security support
+* Protection during eligible situations
+* Worker welfare assistance
+
+Display a visual:
+
+**₹60 from every ₹1,000 service**
+
+→ Insurance & Social Security
+
+Add a simple progress/benefit visualization.
+
+Include:
+
+**Purpose:**
+To provide a cooperative-supported financial safety layer for participating workers.
+
+Add a button:
+
+**View Coverage Details**
+
+For the prototype, this button can open a modal explaining that the displayed coverage is a demonstration of the cooperative welfare model and is not an actual insurance policy.
+
+---
+
+# 🚨 EMERGENCY ASSISTANCE
+
+Create a separate card:
+
+### Emergency Assistance Fund
+
+**4% of the Cooperative Contribution**
+
+Example:
+
+₹1,000 service
+
+→ ₹40 Emergency Assistance
+
+Purpose:
+
+* Emergency assistance for eligible workers
+* Support during urgent situations
+* Cooperative emergency response
+* Community-supported assistance
+
+Add a visual emergency fund indicator.
+
+Button:
+
+**Request Emergency Support**
+
+When clicked, open a simulated emergency assistance form:
+
+* Emergency type
+* Worker name
+* Current location
+* Description
+* Emergency contact
+
+Button:
+
+**Submit Emergency Request**
+
+After submission show:
+
+### Emergency Request Created
+
+**Request ID: KAARYA-EMG-XXXX**
+
+Status:
+
+**Under Cooperative Review**
+
+Clearly label:
+
+**Emergency Assistance Simulation — Prototype**
+
+Do not make actual emergency calls or claim guaranteed assistance.
+
+---
+
+# 48. SURPLUS VIEW — COOPERATIVE SURPLUS TRACKER
+
+Add another dedicated section in the **left sidebar**:
+
+## 📈 Surplus View
+
+When the user taps/clicks it, open a dedicated dashboard.
+
+This should be one of KAARYA's distinctive cooperative features.
+
+The purpose is to show how the **5% Year-End Cooperative Surplus** accumulates based on completed services.
+
+---
+
+## TOP SUMMARY
+
+Display:
+
+### Year-End Cooperative Surplus
+
+**5% of Cooperative Contribution**
+
+Show:
+
+**Service Value → Cooperative Contribution → Surplus Allocation**
+
+Example:
+
+₹1,000 Service
+
+→ ₹200 Cooperative Contribution
+
+→ ₹50 Year-End Cooperative Surplus
+
+Clearly explain:
+
+**5% of the service amount is not the surplus. The surplus allocation is 5% of the cooperative contribution.**
+
+Use the exact cooperative model:
+
+* 5% App & Technology Running Cost
+* 6% Worker Insurance & Social Security
+* 4% Emergency Assistance Fund
+* 5% Year-End Cooperative Surplus
+
+Total Cooperative Contribution:
+
+**20%**
+
+---
+
+# 49. KM-BASED SURPLUS VIEW
+
+Create a special visualization based on the worker's **completed kilometres / service travel activity**.
+
+The purpose is to let workers understand their activity and the cooperative surplus generated from completed service activity.
+
+Show:
+
+### My Service Activity
+
+**Total KM Completed**
+
+Example:
+
+**248.6 KM**
+
+Break it into:
+
+* Completed jobs
+* Service visits
+* Community/group bookings
+* Multi-service projects
+
+Create a visual:
+
+**KM Completed → Completed Services → Cooperative Activity → Surplus Contribution**
+
+Important:
+
+Do not claim that kilometres themselves directly determine the surplus unless the business rule explicitly defines such a calculation.
+
+Instead, use kilometres as an **activity/impact view**, while the actual surplus calculation remains based on completed service transactions.
+
+---
+
+# 50. SURPLUS ACTIVITY TIMELINE
+
+Create a transaction-style list:
+
+### Recent Cooperative Activity
+
+| Date   | Service    | KM      | Service Value | Surplus Allocation |
+| ------ | ---------- | ------- | ------------- | ------------------ |
+| 20 Sep | Plumbing   | 8.4 km  | ₹1,000        | ₹50                |
+| 19 Sep | Electrical | 5.2 km  | ₹1,500        | ₹75                |
+| 18 Sep | Carpentry  | 11.6 km | ₹2,000        | ₹100               |
+
+Make it visually attractive.
+
+Show:
+
+**Total Surplus Accumulated**
+
+₹2,450
+
+Use demo data.
+
+Clearly mark:
+
+**Demo Cooperative Data**
+
+---
+
+# 51. SURPLUS VIEW FILTERS
+
+Allow the worker/admin to filter:
+
+### Time
+
+* Today
+* This Week
+* This Month
+* This Year
+
+### Activity
+
+* All Services
+* Group Bookings
+* Multi-Service Projects
+* Individual Bookings
+
+### Distance
+
+* 0–5 KM
+* 5–10 KM
+* 10–20 KM
+* 20+ KM
+
+---
+
+# 52. KM ACTIVITY VISUALIZATION
+
+Create a clean chart:
+
+### Service Distance Activity
+
+X-axis:
+
+Days / Dates
+
+Y-axis:
+
+Kilometres
+
+Show completed service kilometres.
+
+Add summary cards:
+
+**Total KM**
+
+248.6 km
+
+**Jobs Completed**
+
+42
+
+**Community Jobs**
+
+12
+
+**Multi-Service Projects**
+
+5
+
+Do not use Google Maps.
+
+Use lightweight charts or CSS/SVG.
+
+---
+
+# 53. COOPERATIVE SURPLUS EXPLANATION
+
+Add a section:
+
+## Where Does the Surplus Go?
+
+Explain the concept in simple language:
+
+**The Year-End Cooperative Surplus represents the portion of the cooperative contribution reserved for the cooperative's year-end surplus pool.**
+
+Show:
+
+### 5%
+
+**Year-End Cooperative Surplus**
+
+Then display:
+
+**Transparent → Trackable → Cooperative**
+
+Do not invent a guaranteed individual payout.
+
+Instead state:
+
+**Final distribution or utilization is subject to cooperative rules and applicable decisions.**
+
+This keeps the prototype transparent without making unsupported financial promises.
+
+---
+
+# 54. LEFT SIDEBAR NAVIGATION
+
+Update the sidebar.
+
+For the WORKER role, use:
+
+### Main
+
+🏠 Dashboard
+💼 Job Requests
+📅 My Jobs
+💰 Earnings
+
+### Cooperative
+
+🪪 Digital Worker Passport
+🛡️ Insurance & Emergency
+📈 Surplus View
+🤝 Cooperative Benefits
+
+### Personal
+
+⭐ Ratings
+🕐 Availability
+👤 Profile
+
+### Safety
+
+🚨 SOS
+
+For CUSTOMER role:
+
+### Main
+
+🏠 Home
+🔎 Explore Services
+📅 My Bookings
+
+### Services
+
+🤝 Group Booking
+🏠 Multi-Service Project
+🎙️ Voice Booking
+
+### Trust & Safety
+
+🪪 Worker Passport
+🛡️ Safety & Emergency
+
+### Cooperative
+
+🌱 Contribution Transparency
+
+For ADMIN:
+
+### Management
+
+📊 Dashboard
+👥 Worker Verification
+📅 Booking Management
+🛠️ Service Management
+
+### Cooperative
+
+💰 Welfare Dashboard
+🛡️ Insurance & Emergency
+📈 Surplus View
+
+### Operations
+
+🚨 Emergency Management
+📈 Analytics
+
+---
+
+# 55. SIDEBAR INTERACTION
+
+The sidebar should be collapsible.
+
+Desktop:
+
+**Icon + Text**
+
+Collapsed:
+
+**Icons only**
+
+Mobile:
+
+Use a drawer menu.
+
+When the user taps:
+
+**Insurance & Emergency**
+
+open the dedicated page.
+
+When the user taps:
+
+**Surplus View**
+
+open the dedicated surplus dashboard.
+
+Use subtle active-state highlighting.
+
+Do not reload the entire application unnecessarily.
+
+Use React Router for navigation.
+
+---
+
+# 56. PREMIUM VISUAL DESIGN FOR THESE SECTIONS
+
+The Insurance & Emergency page should feel:
+
+**Secure + Trustworthy + Human**
+
+The Surplus View should feel:
+
+**Transparent + Financial + Cooperative + Data-driven**
+
+Use:
+
+* Premium cards
+* Clean icons
+* Circular/segmented visuals
+* Progress indicators
+* Small charts
+* Clear numbers
+* Tooltips
+* Timeline components
+
+Avoid making these pages look like ordinary banking dashboards.
+
+---
+
+# 57. SIH DEMO WOW MOMENT
+
+During the SIH presentation, after showing the:
+
+**₹1,000 service**
+
+display:
+
+### 20% Cooperative Contribution
+
+₹200
+
+Then open:
+
+### 🛡️ Insurance & Emergency
+
+Show:
+
+₹60 → Insurance & Social Security
+
+₹40 → Emergency Assistance
+
+Then open:
+
+### 📈 Surplus View
+
+Show:
+
+₹50 → Year-End Cooperative Surplus
+
+and demonstrate:
+
+**Completed Services → KM Activity → Cooperative Activity → Surplus Tracking**
+
+This creates a clear story:
+
+**Customer pays → Worker earns → Worker receives welfare support → Emergency fund grows → Cooperative surplus is tracked transparently.**
+
+---
+
+# 58. IMPORTANT DATA RULE
+
+Use the existing 20% model consistently throughout the application.
+
+For a ₹1,000 service:
+
+### Service Value
+
+₹1,000
+
+### Cooperative Contribution
+
+₹200
+
+### Worker Earnings
+
+₹800
+
+### Contribution Breakdown
+
+₹50 — App & Technology Running Cost
+
+₹60 — Worker Insurance & Social Security
+
+₹40 — Emergency Assistance Fund
+
+₹50 — Year-End Cooperative Surplus
+
+Do not create conflicting percentages anywhere else in the application.
+
+The KM dashboard should be an **activity/impact visualization**, not an invented rule that pays workers based on kilometres.
+
+---
+
+# 59. FINAL UI CHECK
+
+Make sure:
+
+✓ Insurance & Emergency appears in the left sidebar
+
+✓ Surplus View appears in the left sidebar
+
+✓ Both open dedicated pages
+
+✓ Both work on mobile
+
+✓ Both work on desktop
+
+✓ 20% contribution remains consistent
+
+✓ 6% insurance allocation is clearly visible
+
+✓ 4% emergency allocation is clearly visible
+
+✓ 5% surplus allocation is clearly visible
+
+✓ KM activity is visually represented
+
+✓ Surplus transactions are shown
+
+✓ Filters work
+
+✓ Charts are responsive
+
+✓ Demo data is clearly identified
+
+✓ No real insurance claims are made
+
+✓ No real emergency services are triggered
+
+✓ No unsupported financial payout promises are made
