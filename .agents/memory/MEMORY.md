@@ -1,0 +1,1 @@
+- [Worker route precedence](worker-route-precedence.md) — keep explicit worker routes before the legacy `/worker/:id` passport route in Wouter.

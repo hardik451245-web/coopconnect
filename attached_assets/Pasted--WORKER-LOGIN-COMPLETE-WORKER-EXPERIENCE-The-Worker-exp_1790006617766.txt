@@ -1,0 +1,1148 @@
+# WORKER LOGIN + COMPLETE WORKER EXPERIENCE
+
+The Worker experience must be a **fully separate, premium application flow** inside KAARYA.
+
+Do not treat the Worker Dashboard as just another page.
+
+The complete flow must be:
+
+**KAARYA Welcome/Login → Worker Login → Worker Dashboard → Job Requests → My Jobs → Earnings → Cooperative Welfare → Insurance & Emergency → Surplus View → Digital Worker Passport → Availability → Ratings → Profile → Safety/SOS**
+
+The Worker experience should be designed specifically for service professionals and should feel simple, trustworthy, empowering and professional.
+
+---
+
+# 1. KAARYA ROLE-BASED LOGIN
+
+Create a premium login/role-selection screen.
+
+Header:
+
+# KAARYA
+
+**Fair Work. Trusted Services. Cooperative Future.**
+
+Show three large role cards:
+
+### 👤 Customer
+
+**Find trusted services**
+
+Button:
+
+**Continue as Customer**
+
+---
+
+### 👷 Worker
+
+**Find fair work and grow with your cooperative**
+
+Button:
+
+**Continue as Worker**
+
+---
+
+### 🏢 Cooperative Admin
+
+**Manage workers, services and cooperative welfare**
+
+Button:
+
+**Continue as Admin**
+
+The Worker option must be visually prominent but maintain equal importance for all roles.
+
+---
+
+# 2. WORKER LOGIN SCREEN
+
+When the user selects:
+
+**Continue as Worker**
+
+open a dedicated:
+
+# Worker Login
+
+Design it as a premium, simple mobile-first login screen.
+
+Show:
+
+### Welcome back, Worker
+
+**Sign in to manage your jobs, earnings and cooperative benefits.**
+
+Fields:
+
+**Mobile Number**
+
+**Password / Demo PIN**
+
+Buttons:
+
+**Login**
+
+**Use Demo Worker Account**
+
+Because this is a prototype, do not implement real authentication.
+
+Use a demo worker account.
+
+Example:
+
+**Worker:** Amit Sharma
+**Role:** Electrician
+**Status:** Verified Cooperative Worker
+
+Button:
+
+**Enter Worker Demo**
+
+---
+
+# 3. WORKER LOGIN FEATURES
+
+Include:
+
+* KAARYA logo
+* Worker icon
+* Secure-looking login card
+* Remember demo session
+* Forgot PIN visual
+* Back to role selection
+* SIH 2026 • Prototype badge
+
+Do not collect or store real sensitive credentials.
+
+Use LocalStorage only for the demo session.
+
+After successful demo login:
+
+**Redirect to `/worker/dashboard`**
+
+---
+
+# 4. WORKER DASHBOARD
+
+Create a completely dedicated premium Worker Dashboard.
+
+Top section:
+
+### Good Morning, Amit 👋
+
+**Ready for today's work?**
+
+Show a small status:
+
+🟢 **Available for Jobs**
+
+Button:
+
+**Manage Availability**
+
+---
+
+# 5. WORKER DASHBOARD SUMMARY CARDS
+
+Create four premium summary cards:
+
+### Today's Earnings
+
+**₹2,450**
+
+---
+
+### Upcoming Jobs
+
+**3**
+
+---
+
+### Completed Jobs
+
+**128**
+
+---
+
+### Rating
+
+**4.8 ★**
+
+Use subtle icons and clean visual hierarchy.
+
+---
+
+# 6. TODAY'S WORK
+
+Create a section:
+
+## Today's Jobs
+
+Example:
+
+### 10:00 AM
+
+🔧 Kitchen Plumbing
+
+Customer:
+Rahul
+
+Distance:
+4.2 km
+
+Estimated Earnings:
+₹850
+
+Status:
+
+**Accepted**
+
+Button:
+
+**View Job**
+
+---
+
+### 2:00 PM
+
+⚡ Electrical Repair
+
+Customer:
+Priya
+
+Distance:
+6.8 km
+
+Estimated Earnings:
+₹1,200
+
+Status:
+
+**Upcoming**
+
+Button:
+
+**View Job**
+
+---
+
+# 7. JOB REQUESTS
+
+Create a dedicated page:
+
+# Job Requests
+
+Show incoming service requests.
+
+Each card should contain:
+
+* Service
+* Customer
+* Approximate location
+* Distance
+* Date
+* Time
+* Estimated duration
+* Estimated worker earnings
+* Customer rating/history where appropriate
+* Verification/trust indicators
+
+Buttons:
+
+### Accept
+
+### Decline
+
+When accepted:
+
+Status changes to:
+
+**Accepted**
+
+Store the state in LocalStorage.
+
+---
+
+# 8. MY JOBS
+
+Create:
+
+# My Jobs
+
+Tabs:
+
+**Upcoming | Active | Completed**
+
+Each job should display:
+
+* Service
+* Customer
+* Date
+* Time
+* Location
+* Earnings
+* Status
+
+Use the booking lifecycle:
+
+**Requested → Accepted → Worker On The Way → Work Started → Completed**
+
+Add buttons where appropriate:
+
+**Start Travel**
+
+**Start Work**
+
+**Mark Completed**
+
+These are prototype actions only.
+
+---
+
+# 9. WORKER EARNINGS DASHBOARD
+
+Create:
+
+# My Earnings
+
+Top cards:
+
+**Today**
+
+₹2,450
+
+**This Week**
+
+₹14,800
+
+**This Month**
+
+₹52,400
+
+**Completed Jobs**
+
+128
+
+Show a clean earnings chart.
+
+Also display:
+
+### Earnings Breakdown
+
+Service Value
+
+₹1,000
+
+Cooperative Contribution
+
+₹200
+
+Worker Earnings
+
+₹800
+
+Use the same KAARYA 20% contribution model everywhere.
+
+---
+
+# 10. WORKER COOPERATIVE BENEFITS
+
+Create a dedicated page:
+
+# Cooperative Benefits
+
+Show four premium benefit cards:
+
+### 🛡️ Insurance & Social Security
+
+**6% allocation**
+
+Worker protection and social security support.
+
+---
+
+### 🚨 Emergency Assistance
+
+**4% allocation**
+
+Cooperative emergency assistance fund.
+
+---
+
+### 📈 Year-End Cooperative Surplus
+
+**5% allocation**
+
+Transparent cooperative surplus pool.
+
+---
+
+### ⚙️ App & Technology
+
+**5% allocation**
+
+Technology and platform operating costs.
+
+Show:
+
+**Total Cooperative Contribution: 20%**
+
+---
+
+# 11. INSURANCE & EMERGENCY
+
+Worker sidebar must include:
+
+## 🛡️ Insurance & Emergency
+
+When opened, display two major sections.
+
+### Worker Insurance & Social Security
+
+**6% of Cooperative Contribution**
+
+Example:
+
+₹1,000 service
+
+→ ₹60 allocation
+
+Explain its purpose as:
+
+* Worker insurance support
+* Social security support
+* Cooperative welfare
+* Eligible worker protection
+
+Button:
+
+**View Coverage Details**
+
+Open a prototype modal explaining that this is a demonstration of the cooperative welfare model, not an actual insurance policy.
+
+---
+
+### Emergency Assistance
+
+**4% of Cooperative Contribution**
+
+Example:
+
+₹1,000 service
+
+→ ₹40 allocation
+
+Show:
+
+* Emergency support
+* Cooperative response
+* Assistance request
+* Emergency fund status
+
+Button:
+
+**Request Emergency Support**
+
+Form:
+
+* Emergency type
+* Current location
+* Description
+* Emergency contact
+
+Submit:
+
+**Create Emergency Request**
+
+Then show:
+
+**Emergency Request Created**
+
+Request ID:
+
+**KAARYA-EMG-XXXX**
+
+Status:
+
+**Under Cooperative Review**
+
+Clearly display:
+
+**Emergency Assistance Simulation — Prototype**
+
+Do not make real emergency calls.
+
+---
+
+# 12. SURPLUS VIEW
+
+Add a dedicated Worker sidebar item:
+
+## 📈 Surplus View
+
+When opened:
+
+# Cooperative Surplus View
+
+Show:
+
+### Year-End Cooperative Surplus
+
+**5% allocation**
+
+Then display:
+
+**Total Surplus Pool**
+
+₹2,450
+
+Use demo data.
+
+---
+
+# 13. KM SERVICE ACTIVITY
+
+Include a distinctive worker activity visualization.
+
+Show:
+
+### My Service Activity
+
+**248.6 KM**
+
+Additional cards:
+
+**42 Jobs Completed**
+
+**12 Community Jobs**
+
+**5 Multi-Service Projects**
+
+Show a clean chart:
+
+# Service Distance Activity
+
+Display completed service kilometres over time.
+
+Use mock data.
+
+Important:
+
+**KM is an activity/impact metric and does not independently determine surplus payout.**
+
+The actual surplus allocation remains based on completed service transactions according to the KAARYA cooperative model.
+
+---
+
+# 14. SURPLUS TRANSACTION HISTORY
+
+Create:
+
+## Recent Cooperative Activity
+
+Example:
+
+**Plumbing**
+8.4 km
+₹1,000 service
+₹50 surplus allocation
+
+---
+
+**Electrical**
+5.2 km
+₹1,500 service
+₹75 surplus allocation
+
+---
+
+**Carpentry**
+11.6 km
+₹2,000 service
+₹100 surplus allocation
+
+Use demo data.
+
+Add filters:
+
+**Today | This Week | This Month | This Year**
+
+And:
+
+**All Services | Group Bookings | Multi-Service Projects**
+
+---
+
+# 15. DIGITAL WORKER PASSPORT
+
+Worker dashboard should have a prominent card:
+
+# KAARYA DIGITAL WORKER PASSPORT
+
+Show:
+
+* Worker photo/avatar
+* Name
+* Worker ID
+* Verified status
+* Cooperative membership
+* Skills
+* Experience
+* Certifications
+* Completed jobs
+* Rating
+* Safety training
+* Welfare status
+
+Add:
+
+**QR-style verification visual**
+
+Button:
+
+**View Full Passport**
+
+This should be one of the most premium screens in the Worker experience.
+
+---
+
+# 16. WORKER AVAILABILITY
+
+Create:
+
+# My Availability
+
+Worker can select:
+
+**Available**
+
+**Busy**
+
+**Unavailable**
+
+Allow selection of:
+
+* Days
+* Time slots
+* Service categories
+
+Example:
+
+Monday:
+
+9 AM – 6 PM
+
+Tuesday:
+
+9 AM – 6 PM
+
+Use LocalStorage.
+
+The matching system should use this demo availability data.
+
+---
+
+# 17. WORKER RATINGS
+
+Create:
+
+# My Ratings
+
+Show:
+
+**4.8 ★**
+
+Breakdown:
+
+5 ★ — 86%
+4 ★ — 10%
+3 ★ — 3%
+2 ★ — 1%
+1 ★ — 0%
+
+Show recent feedback cards.
+
+Keep feedback as realistic demo data.
+
+---
+
+# 18. WORKER PROFILE
+
+Create:
+
+# My Profile
+
+Show:
+
+* Name
+* Profile photo
+* Phone placeholder
+* Cooperative
+* Worker ID
+* Skills
+* Experience
+* Certifications
+* Languages
+* Service area
+* Availability
+
+Buttons:
+
+**Edit Profile**
+
+**Update Skills**
+
+**Update Availability**
+
+---
+
+# 19. WORKER SAFETY CENTER
+
+Create:
+
+# Worker Safety
+
+Show:
+
+### Emergency Contact
+
+### SOS
+
+### Job Check-In
+
+### Job Check-Out
+
+### Share Job Status
+
+### Safety Training
+
+Add a prominent:
+
+# 🚨 SOS
+
+When clicked:
+
+Show:
+
+**Request Emergency Assistance**
+
+Then simulate:
+
+**Emergency Request Created**
+
+Clearly label:
+
+**SOS Simulation — Prototype**
+
+Do not make actual calls or contact emergency services.
+
+---
+
+# 20. WORKER SIDEBAR
+
+Create a premium collapsible desktop sidebar.
+
+### MAIN
+
+🏠 Dashboard
+💼 Job Requests
+📅 My Jobs
+💰 Earnings
+
+### COOPERATIVE
+
+🪪 Digital Worker Passport
+🤝 Cooperative Benefits
+🛡️ Insurance & Emergency
+📈 Surplus View
+
+### PERSONAL
+
+🕐 Availability
+⭐ Ratings
+👤 Profile
+
+### SAFETY
+
+🚨 SOS
+
+At the bottom:
+
+**KAARYA**
+
+**SIH 2026 • Prototype**
+
+And:
+
+**Logout**
+
+---
+
+# 21. WORKER MOBILE NAVIGATION
+
+On mobile, do not show the entire desktop sidebar permanently.
+
+Use:
+
+### Bottom Navigation
+
+**Home | Jobs | Earnings | Activity | Profile**
+
+The remaining sections should open through a menu/drawer.
+
+The drawer should include:
+
+* Digital Passport
+* Cooperative Benefits
+* Insurance & Emergency
+* Surplus View
+* Availability
+* Ratings
+* Safety/SOS
+* Logout
+
+---
+
+# 22. WORKER NOTIFICATIONS
+
+Add a notification icon.
+
+Examples:
+
+🔔
+
+**New plumbing job request**
+
+**Your booking starts in 1 hour**
+
+**Your cooperative contribution was recorded**
+
+**Your Digital Worker Passport was updated**
+
+**Emergency assistance request status updated**
+
+Use mock notifications.
+
+---
+
+# 23. WORKER DASHBOARD QUICK ACTIONS
+
+Place a row of quick-action buttons:
+
+### Find Jobs
+
+### My Earnings
+
+### Digital Passport
+
+### Insurance
+
+### Surplus
+
+### SOS
+
+These should be highly visible on mobile.
+
+---
+
+# 24. WORKER DEMO JOURNEY FOR SIH
+
+The SIH judges should be able to demonstrate the Worker side quickly.
+
+Flow:
+
+### 1.
+
+KAARYA Login
+
+### 2.
+
+Tap:
+
+**Continue as Worker**
+
+### 3.
+
+Worker Login
+
+### 4.
+
+Tap:
+
+**Enter Worker Demo**
+
+### 5.
+
+Open Worker Dashboard
+
+Show:
+
+**₹2,450 Today's Earnings**
+
+**3 Upcoming Jobs**
+
+**4.8 Rating**
+
+### 6.
+
+Open:
+
+**Job Requests**
+
+Accept a plumbing request.
+
+### 7.
+
+Open:
+
+**My Jobs**
+
+Show:
+
+**Accepted → Worker On The Way**
+
+### 8.
+
+Open:
+
+**Digital Worker Passport**
+
+Show verification, skills and cooperative membership.
+
+### 9.
+
+Open:
+
+**Insurance & Emergency**
+
+Show:
+
+**6% Insurance**
+
+**4% Emergency Assistance**
+
+### 10.
+
+Open:
+
+**Surplus View**
+
+Show:
+
+**5% Year-End Cooperative Surplus**
+
+and:
+
+**248.6 KM Service Activity**
+
+### 11.
+
+Open:
+
+**Earnings**
+
+Show:
+
+₹1,000 Service
+
+₹200 Cooperative Contribution
+
+₹800 Worker Earnings
+
+### 12.
+
+Open:
+
+**SOS**
+
+Show the simulated emergency request.
+
+This gives judges a complete view of the worker ecosystem.
+
+---
+
+# 25. WORKER UI QUALITY REQUIREMENT
+
+The Worker experience must NOT look like a basic employee management dashboard.
+
+It should feel like:
+
+**A premium digital workplace for cooperative service professionals.**
+
+Design priorities:
+
+**Trust**
+
+**Fair earnings**
+
+**Worker identity**
+
+**Welfare**
+
+**Safety**
+
+**Community**
+
+**Professional growth**
+
+The worker should feel that KAARYA is designed to support them, not simply assign them jobs.
+
+---
+
+# 26. WORKER ROUTES
+
+Make sure these routes exist and work:
+
+/worker/login
+
+/worker/dashboard
+
+/worker/jobs
+
+/worker/my-jobs
+
+/worker/earnings
+
+/worker/passport
+
+/worker/welfare
+
+/worker/insurance-emergency
+
+/worker/surplus
+
+/worker/availability
+
+/worker/ratings
+
+/worker/profile
+
+/worker/safety
+
+Use React Router.
+
+All pages must be connected through the Worker sidebar.
+
+Persist demo worker session and relevant state using LocalStorage.
+
+---
+
+# 27. WORKER QUALITY CHECK
+
+Before completing the project, verify:
+
+✓ Worker login works
+
+✓ Demo worker login works
+
+✓ Worker dashboard opens correctly
+
+✓ Worker sidebar works
+
+✓ Worker mobile navigation works
+
+✓ Job Requests work
+
+✓ Accept/Decline works
+
+✓ My Jobs works
+
+✓ Booking status changes work
+
+✓ Earnings work
+
+✓ Digital Passport works
+
+✓ Insurance page works
+
+✓ Emergency assistance simulation works
+
+✓ Surplus View works
+
+✓ KM activity works
+
+✓ Availability works
+
+✓ Ratings work
+
+✓ Profile works
+
+✓ SOS works
+
+✓ Worker logout works
+
+✓ Refresh does not destroy demo state
+
+✓ No broken worker routes
+
+✓ No console errors
+
+---
+
+# 28. IMPORTANT KAARYA CONSISTENCY RULE
+
+Everywhere in the application, maintain the same cooperative model:
+
+For a ₹1,000 service:
+
+**Service Value: ₹1,000**
+
+**Cooperative Contribution: ₹200**
+
+**Worker Earnings: ₹800**
+
+Contribution:
+
+**₹50 — 5% App & Technology Running Cost**
+
+**₹60 — 6% Worker Insurance & Social Security**
+
+**₹40 — 4% Emergency Assistance Fund**
+
+**₹50 — 5% Year-End Cooperative Surplus**
+
+Total:
+
+**20% Cooperative Contribution**
+
+Do not create conflicting percentages or calculations in the Worker Dashboard.
+
+The KM section is for service activity/impact tracking and must not invent a kilometre-based payout rule.
+
+---
+
+# 29. FINAL WORKER EXPERIENCE
+
+The final Worker experience should communicate:
+
+## Earn
+
+Get service opportunities and track earnings.
+
+## Verify
+
+Build a trusted professional identity through the Digital Worker Passport.
+
+## Protect
+
+Access cooperative-supported insurance/social-security and emergency assistance features.
+
+## Participate
+
+Contribute to and view the cooperative ecosystem transparently.
+
+## Grow
+
+Build ratings, skills, experience and professional history.
+
+## Stay Safe
+
+Use safety tools, job check-in/check-out and SOS simulation.
+
+The complete experience should feel like:
+
+# KAARYA
+
+### Your Work. Your Identity. Your Cooperative.
