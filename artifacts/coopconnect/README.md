@@ -1,134 +1,67 @@
-# CoopConnect
+# CoopConnect (Sahakaar-Seva-Hub)
 
-**Cooperative Gig Services Platform**  
-**SIH 2026 · Problem Statement 26089**
+**Cooperative Gig Services Platform**
 
-CoopConnect is a responsive prototype for a cooperative-owned household and community services marketplace. It connects customers with verified cooperative workers while making fair pricing, worker welfare, safety support, and cooperative ownership visible.
+CoopConnect is a comprehensive platform for a cooperative-owned household and community services marketplace. It connects customers with verified, skilled cooperative workers while making fair pricing, worker welfare, safety support, and cooperative ownership visible and transparent.
 
-## Problem
+## Overview
 
-Skilled workers in Labour Cooperative Federations and Labour Cooperative Societies often have local capability but no structured digital channel to reach households, communities, and institutions. Existing private marketplaces can hide pricing and reduce worker earnings.
+Skilled workers in Labour Cooperative Federations and Labour Cooperative Societies often have strong local capabilities but lack a structured digital channel to reach households, communities, and institutions. Existing private gig platforms often obscure pricing, extract high commissions, and minimize worker protections.
 
-## Solution
+CoopConnect provides a sustainable, cooperative-owned alternative that treats gig workers as valued member-owners.
 
-CoopConnect provides:
+## Core Capabilities
 
-- Customer service discovery and AI-assisted local matching
-- Verified worker profiles and a portable Cooperative Worker Digital Passport
-- Transparent booking and demo payment flows
-- Community group booking and pooled job routes
-- Women-safe service assignment preference
-- AI Coordinated Multi-Service Project Booking
-- Welfare and contribution transparency
-- Worker earnings, availability, safety, and SOS surfaces
-- Cooperative admin monitoring and worker verification
-- English, Hindi, and Marathi navigation labels
-- Offline-friendly local demo persistence
+- **Customer Service Discovery & AI-Assisted Matching**: Intelligent local matching based on trade skills, proximity, verified ratings, and availability.
+- **Cooperative Worker Digital Passport**: Portable professional credential detailing verified certifications, trade skills, cooperative standing, safety training records, and ratings.
+- **Transparent Cooperative Contribution Model**: Clear breakdown showing worker earnings (80%) and the 20% cooperative contribution fund allocation.
+- **Community Group Booking & Job Pooling**: Coordinates nearby household requests into pooled service batches to minimize transit time and maximize worker income.
+- **Women-Safe Service Assignment**: Allows customers to select verified female professionals with transparent verification and safety escalation pathways.
+- **AI-Coordinated Multi-Service Projects**: Decomposes complex home improvements (e.g. renovations, pre-monsoon checks) into scheduled, sequential trade tasks.
+- **Worker Welfare & Social Security Ledger**: Tracks contributions allocated to healthcare/insurance, emergency assistance, and annual cooperative surplus.
+- **Worker Management Portal**: Real-time job requests, workflow status tracking (Accepted, En Route, In Progress, Completed), availability scheduling, and safety check-ins.
+- **Cooperative Admin Console**: Comprehensive oversight of member verification, booking operations, safety desk escalations, and welfare fund distribution.
+- **Multilingual Support**: Full navigation and interface labels in English, Hindi (हिंदी), and Marathi (मराठी).
+- **Offline Resilience**: Local client caching ensures smooth performance and reliable record keeping even during intermittent connectivity.
 
-## Key Features
+## Transparent Contribution Model
 
-### Cooperative Worker Digital Passport
-
-Each worker has a portable professional record with verified skills, certifications, cooperative membership, work history, ratings, safety training, and welfare status.
-
-### Community Group Booking & Job Pooling
-
-Nearby compatible requests can be grouped into a service batch to reduce travel and improve worker utilisation.
-
-### Transparent Cooperative Contribution
-
-The prototype shows a 20% cooperative contribution separately from worker earnings:
+CoopConnect makes the 20% cooperative contribution completely transparent on every booking:
 
 | Allocation | Percentage | Purpose |
-| --- | ---: | --- |
-| App & Technology Running Cost | 5% | Hosting, maintenance, security, notifications, and support |
-| Worker Insurance & Social Security | 6% | Insurance support and long-term welfare benefits |
-| Emergency Assistance Fund | 4% | Emergency financial and accident assistance |
-| Year-End Cooperative Surplus | 5% | Retained or distributed according to cooperative rules |
+| :--- | :---: | :--- |
+| **App & Technology Infrastructure** | 5% | Hosting, platform maintenance, dispatch automation, security, and member communications |
+| **Worker Insurance & Social Security** | 6% | Comprehensive accidental cover, health insurance support, and long-term security funds |
+| **Emergency Assistance Fund** | 4% | Immediate financial and medical assistance for on-job incidents and hardship relief |
+| **Year-End Cooperative Surplus** | 5% | Retained earnings distributed to member workers or reinvested per cooperative bylaws |
 
-### Women-Safe Service Assignment
-
-Customers can prefer a verified female service professional. The prototype prioritises eligible workers while keeping the wider network available. Safety-support features are designed to improve transparency and emergency response; they do not guarantee safety.
-
-### AI Coordinated Multi-Service Project Booking
-
-Customers can create one renovation project. Deterministic prototype logic decomposes it into trades, assigns approximate sequence and time slots, and presents one project timeline.
+*Worker earnings remain separate and fully protected at 80% of service value.*
 
 ## Technology Stack
 
-- React + Vite + TypeScript
-- Tailwind CSS
-- Wouter routing
-- Lucide React icons
-- Browser localStorage for demo persistence
-- Browser Speech Recognition when available
-- CSS and lightweight inline visualisations
+- **Frontend**: React 19, TypeScript 5.9, Vite 7
+- **Styling & UI**: Tailwind CSS v4, Radix UI Primitives, Lucide Icons, Framer Motion
+- **Routing & State**: Wouter client routing, TanStack Query, resilient local persistence
+- **Backend Infrastructure**: Express 5 API server, Pino logger, Drizzle ORM
 
-## Architecture
-
-This prototype intentionally runs as one lightweight frontend application:
-
-```text
-Customer / Worker / Cooperative Admin
-                ↓
-         CoopConnect UI
-                ↓
-     Local prototype logic
-                ↓
-      localStorage demo state
-```
-
-The in-app Architecture page explains how the prototype can evolve into worker management, booking, matching, pricing, welfare, notifications, safety, and cooperative dashboard services.
-
-## AI Prototype Logic
-
-No external AI APIs are used. The app demonstrates the intended product behaviour with deterministic local logic:
-
-- Worker matching considers service skill, availability, distance, rating, and verification.
-- Group booking shows compatible nearby requests and a simulated route.
-- Fair pricing applies service estimates and the transparent contribution model.
-- Project coordination maps a renovation request to predefined trade tasks.
-- Welfare explanations calculate the exact 5% / 6% / 4% / 5% allocation.
-
-All AI and analytics values are labelled as prototype or demo data.
-
-## Run Locally
+## Running Locally
 
 From the workspace root:
 
 ```bash
-pnpm --filter @workspace/coopconnect run dev
+corepack.cmd pnpm --filter @workspace/coopconnect run dev
 ```
 
-The app is designed to start with the existing Replit workflow and does not require a database, API key, paid service, or third-party account.
+Then open your browser at: `http://localhost:5173/`
 
-## Demo Instructions
+### Build for Production
 
-1. Open the home page and choose **Start SIH Demo**.
-2. Follow the Home Renovation flow through service decomposition, worker recommendations, scheduling, price review, contribution allocation, confirmation, and the project timeline.
-3. Switch roles from the top-right selector:
-   - **Customer** — discovery, booking, payments, projects, and SOS
-   - **Worker** — jobs, earnings, welfare, passport, availability, and safety
-   - **Cooperative Admin** — worker verification, bookings, welfare, emergencies, and analytics
-4. Explore **Why CoopConnect**, **Architecture**, **Projects**, and **About the cooperative** from the left navigation.
-5. Use the language selector to preview English, Hindi, and Marathi navigation labels.
+```bash
+corepack.cmd pnpm --filter @workspace/coopconnect run build
+```
 
-## Limitations
+### Typecheck
 
-This is a judge-facing prototype, not a production marketplace:
-
-- Demo data is fictional and stored locally in the browser.
-- Authentication, payments, SMS, voice notifications, maps, identity checks, and emergency dispatch are simulated.
-- The QR-style passport visual is a prototype verification placeholder.
-- Speech recognition depends on browser support.
-- No claim of government verification or guaranteed safety is made.
-
-## Future Scope
-
-- Cooperative-managed backend and role-based authentication
-- Real worker onboarding, KYC, skill verification, and certification integrations
-- Production payment settlement and cooperative accounting
-- Regional language voice workflows
-- Geo-aware routing and offline sync
-- Insurance, grievance, and emergency response integrations
-- Federation-level reporting and NCCT training programme connectivity
+```bash
+corepack.cmd pnpm --filter @workspace/coopconnect run typecheck
+```

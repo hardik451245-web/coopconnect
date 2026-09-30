@@ -1,7 +1,7 @@
 import fitz
 from pathlib import Path
 src = Path('attached_assets/SIH26089_Updated_with_Additional_Features_Final_1790004172834.pdf')
-out = Path('.agents/outputs/sih-pdf-pages')
+out = Path('.agents/outputs/spec-pdf-pages')
 out.mkdir(parents=True, exist_ok=True)
 doc = fitz.open(src)
 print(f'pages={doc.page_count}')

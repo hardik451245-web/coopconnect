@@ -1,0 +1,521 @@
+Modify the EXISTING KAARYA application. Do not create a new project or separate app.
+
+## IMPORTANT CHANGE: REMOVE KM-BASED SURPLUS
+
+I want to completely remove the existing KM/service-distance concept from the Worker Surplus View.
+
+The number of kilometres must NOT be used anywhere to calculate, determine, rank, or distribute cooperative surplus.
+
+Remove the existing:
+
+* KM Service Activity section
+* KM charts
+* Service Distance Activity chart
+* KM filters
+* KM-based surplus references
+* Any text suggesting kilometres affect worker surplus
+
+The Worker Surplus page should now focus entirely on the number of completed jobs.
+
+---
+
+# 1. NEW SURPLUS MODEL
+
+The cooperative has a Year-End Cooperative Surplus pool.
+
+The surplus allocation remains:
+
+## 5% of the service value goes to the Year-End Cooperative Surplus Pool.
+
+For example:
+
+₹1,000 service
+
+₹200 total cooperative contribution
+
+Within that contribution:
+
+₹50 = 5% App & Technology
+₹60 = 6% Worker Insurance & Social Security
+₹40 = 4% Emergency Assistance
+₹50 = 5% Year-End Cooperative Surplus
+
+Therefore:
+
+Service Value = ₹1,000
+Worker Earnings = ₹800
+Year-End Surplus Pool Contribution = ₹50
+
+Keep this 20% cooperative contribution model consistent everywhere.
+
+---
+
+# 2. SURPLUS DISTRIBUTION METHOD
+
+At the end of the year, distribute the accumulated Year-End Cooperative Surplus Pool to eligible workers based on their number of completed jobs during that year.
+
+Use this formula:
+
+Worker Surplus Share =
+
+(Worker's Completed Jobs ÷ Total Completed Jobs of All Eligible Workers)
+
+× Total Year-End Surplus Pool
+
+Example:
+
+Total Year-End Surplus Pool:
+
+₹1,00,000
+
+Total completed jobs by all eligible workers:
+
+1,000 jobs
+
+Worker A completed:
+
+100 jobs
+
+Worker A's share:
+
+100 ÷ 1,000 × ₹1,00,000
+
+= ₹10,000
+
+Worker B completed:
+
+50 jobs
+
+Worker B's share:
+
+50 ÷ 1,000 × ₹1,00,000
+
+= ₹5,000
+
+Make this calculation dynamic using the demo worker/job data.
+
+---
+
+# 3. WORKER SURPLUS VIEW
+
+Change the page title to:
+
+# Cooperative Surplus
+
+Subtitle:
+
+"Your year-end cooperative surplus is calculated transparently from your completed jobs."
+
+Show these premium summary cards:
+
+### Total Surplus Pool
+
+Example:
+
+₹2,45,000
+
+### My Completed Jobs
+
+Example:
+
+128
+
+### Total Cooperative Jobs
+
+Example:
+
+1,250
+
+### My Surplus Share
+
+Example:
+
+10.24%
+
+### Estimated Year-End Surplus
+
+Example:
+
+₹25,088
+
+The values should be calculated dynamically.
+
+---
+
+# 4. SHOW THE CALCULATION TRANSPARENTLY
+
+Add a section:
+
+## How Your Surplus Is Calculated
+
+Display:
+
+Total Year-End Surplus Pool
+
+₹2,45,000
+
+↓
+
+Total Completed Jobs
+
+1,250
+
+↓
+
+Your Completed Jobs
+
+128
+
+↓
+
+Your Share
+
+128 ÷ 1,250 = 10.24%
+
+↓
+
+Estimated Year-End Surplus
+
+₹25,088
+
+Make it visually clear and easy for a worker to understand.
+
+---
+
+# 5. COMPLETED JOBS SHOULD BE THE ONLY PERFORMANCE METRIC
+
+The surplus calculation must use:
+
+Completed Jobs
+
+It must NOT use:
+
+* Kilometres
+* Distance travelled
+* Location
+* Hours online
+* Number of requests
+* Number of declined jobs
+* Ratings
+* Availability hours
+
+Only successfully completed jobs should determine the worker's share.
+
+Important:
+
+A job counts toward surplus only after its status becomes:
+
+Completed
+
+Requested, Accepted, Worker On The Way, or Work Started must NOT count as a completed job.
+
+---
+
+# 6. CONNECT IT TO MY JOBS
+
+When a worker completes a job using:
+
+Mark Completed
+
+the completed-job count should increase.
+
+For example:
+
+Before:
+
+Completed Jobs = 128
+
+After completing one job:
+
+Completed Jobs = 129
+
+The surplus calculation should automatically update.
+
+Persist this state using LocalStorage because this is a prototype.
+
+---
+
+# 7. SURPLUS TRANSACTION HISTORY
+
+Replace the old KM-based transaction history with completed-job based transactions.
+
+Create:
+
+## Surplus Contribution History
+
+Example:
+
+### Plumbing
+
+Completed Job #KAARYA-1024
+
+Service Value:
+₹1,000
+
+Worker Earnings:
+₹800
+
+Cooperative Contribution:
+₹200
+
+Year-End Surplus Contribution:
+₹50
+
+Status:
+Added to Annual Surplus Pool
+
+---
+
+### Electrical Repair
+
+Completed Job #KAARYA-1025
+
+Service Value:
+₹1,500
+
+Worker Earnings:
+₹1,200
+
+Cooperative Contribution:
+₹300
+
+Year-End Surplus Contribution:
+₹75
+
+Status:
+Added to Annual Surplus Pool
+
+---
+
+### Carpentry
+
+Completed Job #KAARYA-1026
+
+Service Value:
+₹2,000
+
+Worker Earnings:
+₹1,600
+
+Cooperative Contribution:
+₹400
+
+Year-End Surplus Contribution:
+₹100
+
+Status:
+Added to Annual Surplus Pool
+
+---
+
+# 8. YEAR-END DISTRIBUTION
+
+Add a section:
+
+## Year-End Distribution
+
+Show:
+
+Total Surplus Pool:
+₹2,45,000
+
+Distribution Basis:
+
+Completed Jobs
+
+Total Eligible Workers:
+25
+
+Total Completed Jobs:
+1,250
+
+Worker's Completed Jobs:
+128
+
+Worker's Share:
+10.24%
+
+Estimated Surplus:
+₹25,088
+
+Add a clear label:
+
+"Final surplus distribution is calculated at the end of the cooperative year."
+
+---
+
+# 9. IMPORTANT: DO NOT PRESENT THE ESTIMATE AS REAL MONEY
+
+This is a prototype.
+
+Clearly label:
+
+"Estimated Year-End Surplus — Prototype"
+
+and:
+
+"Final surplus distribution is subject to the cooperative's annual rules and verification."
+
+Do not make any real payment.
+
+Do not integrate a payment gateway.
+
+---
+
+# 10. REMOVE OLD KM UI COMPLETELY
+
+Search the entire frontend code for:
+
+KM
+km
+kilometre
+kilometers
+kilometres
+Service Distance
+Distance Activity
+248.6 KM
+
+Remove the old surplus-related KM UI and calculations.
+
+Do NOT remove distance information from individual job cards if distance is useful for navigation/job information.
+
+The important rule is:
+
+Distance may be displayed as job information, but it must NEVER affect surplus calculation.
+
+---
+
+# 11. UPDATE DASHBOARD
+
+If the Worker Dashboard currently contains:
+
+"248.6 KM Service Activity"
+
+remove it.
+
+Replace it with:
+
+## Completed Jobs
+
+128
+
+and optionally:
+
+## Year-End Surplus
+
+₹25,088 Estimated
+
+The dashboard should communicate that completed jobs are the basis of surplus participation.
+
+---
+
+# 12. UPDATE DIGITAL WORKER PASSPORT
+
+Keep:
+
+Completed Jobs: 128
+
+Remove any KM/service-distance metric from the passport if it is presented as a worker performance metric.
+
+The passport should emphasize:
+
+* Skills
+* Experience
+* Certifications
+* Completed Jobs
+* Rating
+* Safety Training
+* Cooperative Membership
+* Welfare Status
+
+---
+
+# 13. UPDATE SIH DEMO FLOW
+
+Change the existing Worker demo journey.
+
+Instead of:
+
+Surplus View
+→ 5% Year-End Surplus
+→ 248.6 KM Service Activity
+
+use:
+
+Surplus View
+→ 5% Year-End Cooperative Surplus
+→ Completed Jobs
+→ Transparent Surplus Calculation
+→ Estimated Year-End Worker Surplus
+
+Demo:
+
+Completed Jobs:
+128
+
+Total Cooperative Completed Jobs:
+1,250
+
+Total Year-End Surplus Pool:
+₹2,45,000
+
+Worker Share:
+10.24%
+
+Estimated Year-End Surplus:
+₹25,088
+
+---
+
+# 14. IMPORTANT CONSISTENCY RULE
+
+Everywhere in KAARYA, maintain:
+
+₹1,000 Service
+
+₹200 Cooperative Contribution
+
+₹800 Worker Earnings
+
+₹50 App & Technology
+₹60 Insurance & Social Security
+₹40 Emergency Assistance
+₹50 Year-End Cooperative Surplus
+
+The ₹50 surplus allocation goes into the common Year-End Cooperative Surplus Pool.
+
+At year end:
+
+Worker's share =
+Worker Completed Jobs / Total Eligible Completed Jobs
+× Total Surplus Pool
+
+Do NOT calculate surplus directly from kilometres.
+
+---
+
+# 15. FINAL QUALITY CHECK
+
+Before finishing, verify:
+
+✓ KM removed from Surplus View
+✓ KM chart removed
+✓ Service Distance Activity removed
+✓ KM does not affect surplus
+✓ Completed Jobs determines surplus share
+✓ Only Completed status counts
+✓ Total surplus pool is calculated from 5% allocations
+✓ Worker share is calculated dynamically
+✓ My Jobs updates completed-job count
+✓ Surplus updates after completing a job
+✓ LocalStorage preserves the prototype data
+✓ Surplus calculation is clearly displayed
+✓ Year-end distribution is clearly explained
+✓ No conflicting surplus formula exists anywhere
+✓ Worker Dashboard no longer shows KM performance
+✓ Digital Worker Passport no longer uses KM as a performance metric
+✓ Mobile view works
+✓ No broken routes
+✓ No console errors
+
+Do not merely change the text. Implement the actual calculation logic and connect it to the existing completed-job state.
